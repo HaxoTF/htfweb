@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --color-dominant: #2f2f2f;
+    --color-primary: #2f99ff;
+}
+
+body, html {
+    font-family: "Roboto", sans-serif;
+    background: linear-gradient(#2f99ff, #56009d);
+    height: 100%;
+}
+
+body {
+    display: flex;
+}
+
+.main {
+    display: block;
+    width: fit-content;
+    background-color: #00000033;
+    padding: 50px;
+    margin: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.maintop {
+    width: fit-content;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+.mainlogo {
+    display: inline-block;
+
+    height: 150px;
+    border-radius: 100%;
+}
+.mainsig {
+    display: inline-block;
+    height: 100px;
+}
+
+.linkholder {
+    display: flex;
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 10px;
+
+    width: 450px;
+    background-color: var(--color-dominant);
+    border-radius: 50px;
+    border: 5px solid transparent;
+
+    box-shadow: 10px 10px #00000022;
+    transition: all 0.5s ease-in-out;
+}
+.linkholder:hover {
+
+    border: 5px solid white;
+    transition: all 0.1s ease-in-out;
+    width: 500px;
+}
+
+.linkicon {
+    vertical-align: middle;
+    max-width: 75px;
+    max-height: 75px;
+    border-radius: 100%;
+    box-shadow: 0 0 10px #000000ff;
+}
+.linkname {
+    vertical-align: middle;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 30px;
+
+    text-shadow: 3px 3px black;
+}
+
+#linkinstagram {
+    background: linear-gradient(90deg, #a600ff, #ff00bb, #ffd900);
+}
+#linkcara {
+    background: linear-gradient(90deg, #1a1a1a, #2c2c2c);
+}
+#linkdiscord {
+    background: linear-gradient(90deg, #0069e9, #118cff);
+}
+
+a {
+    text-decoration: none;
+}
