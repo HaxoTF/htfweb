@@ -1,31 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --color-dominant: #2f2f2f;
-    --color-primary: #2f99ff;
+    --color-dark: #2f2f2f;
+    --color-darker: #161616;
+    --color-blue: #2f99ff;
+    --color-blue-darker: #0d2c4a;
 }
 
 body, html {
     font-family: "Roboto", sans-serif;
     background: linear-gradient(#2f99ff, #56009d);
     height: 100%;
+    margin: 0;
 }
 
 body {
     display: flex;
+    box-shadow: inset 0 0 50px #000000;
 }
 
 .main {
     display: block;
     width: fit-content;
-    background-color: #00000033;
+    background-color: var(--color-dark);
+    box-shadow: 0 15px 0 var(--color-blue-darker);
+    border: 5px solid var(--color-blue);
     padding: 50px;
     margin: auto;
     margin-top: auto;
     margin-bottom: auto;
+    border-radius: 50px;
 }
 .maintop {
-    width: fit-content;
+    display: block;
+    width: 450px;
 
     margin-left: auto;
     margin-right: auto;
@@ -35,35 +43,38 @@ body {
 
     height: 150px;
     border-radius: 100%;
+    border: 5px solid #000000;
 }
 .mainsig {
     display: inline-block;
-    height: 100px;
+    width: 250px;
+    height: auto;
+    filter: invert(0.5) sepia(1) hue-rotate(180deg) saturate(1000%);
 }
 
 .linkholder {
     display: flex;
 
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 5px;
+    margin-bottom: 25px;
     margin-left: auto;
     margin-right: auto;
 
     padding: 10px;
 
     width: 450px;
-    background-color: var(--color-dominant);
+    background-color: var(--color-dark);
+    border: 5px solid rgb(0, 0, 0);
     border-radius: 50px;
-    border: 5px solid transparent;
 
-    box-shadow: 10px 10px #00000022;
+    box-shadow: 0 15px black;
     transition: all 0.5s ease-in-out;
 }
 .linkholder:hover {
 
     border: 5px solid white;
     transition: all 0.1s ease-in-out;
-    width: 500px;
+    transform: scale(1.1);
 }
 
 .linkicon {
