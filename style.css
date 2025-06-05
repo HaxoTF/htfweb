@@ -5,6 +5,15 @@
     --color-darker: #161616;
     --color-blue: #2f99ff;
     --color-blue-darker: #0d2c4a;
+
+    --link-width: 300px;
+
+    --link-icon-size: 40px;
+    --avatar-size: 100px;
+
+    --stripe-size: 110px;
+    --stripe-color-1: #003e8622;
+    --stripe-color-2: #001f5a22;
 }
 
 body, html {
@@ -12,28 +21,89 @@ body, html {
     background: linear-gradient(#2f99ff, #56009d);
     height: 100%;
     margin: 0;
+    z-index: -1;
 }
 
 body {
     display: flex;
     box-shadow: inset 0 0 50px #000000;
 }
+h1 {
+    color: var(--color-dark);
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    background-color: var(--color-blue);
+    padding: 10px;
+    border-radius: 50px;
+}
 
+.stripes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+
+    &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: calc(100% + var(--stripe-size));
+        background-size: var(--stripe-size) var(--stripe-size);
+        background-image: repeating-linear-gradient(
+            45deg,
+            var(--stripe-color-1) 25%,
+            var(--stripe-color-1) 50%,
+            var(--stripe-color-2) 50%,
+            var(--stripe-color-2) 75%
+        );
+        background-size: var(--stripe-size) var(--stripe-size);
+        animation: animateStripes 2s linear infinite;
+    }
+
+    &::after {
+
+    }
+}
+
+@keyframes animateStripes {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(var(--stripe-size) * -1));
+    }
+}
+
+#mainwrapper {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
 .main {
+    color: var(--color-blue);
+    font-size: 20px;
+    max-width: 600px;
+
     display: block;
     width: fit-content;
     background-color: var(--color-dark);
     box-shadow: 0 15px 0 var(--color-blue-darker);
     border: 5px solid var(--color-blue);
-    padding: 50px;
+    padding: 20px;
     margin: auto;
-    margin-top: auto;
-    margin-bottom: auto;
     border-radius: 50px;
+
+    margin-left: 10px;
+    margin-right: 10px;
+    z-index: 2;
 }
 .maintop {
-    display: block;
-    width: 450px;
+    width: var(--link-width);
 
     margin-left: auto;
     margin-right: auto;
@@ -41,13 +111,15 @@ body {
 .mainlogo {
     display: inline-block;
 
-    height: 150px;
+    height: var(--avatar-size);
+    width: var(--avatar-size);
+
     border-radius: 100%;
-    border: 5px solid #000000;
+    border: 5px solid var(--color-blue);
 }
 .mainsig {
     display: inline-block;
-    width: 250px;
+    width: calc(var(--link-width) - var(--avatar-size) - 15px);
     height: auto;
     filter: invert(0.5) sepia(1) hue-rotate(180deg) saturate(1000%);
 }
@@ -56,31 +128,31 @@ body {
     display: flex;
 
     margin-top: 5px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     margin-left: auto;
     margin-right: auto;
 
     padding: 10px;
 
-    width: 450px;
+    width: var(--link-width);
     background-color: var(--color-dark);
-    border: 5px solid rgb(0, 0, 0);
+    border: 5px solid white;
     border-radius: 50px;
 
-    box-shadow: 0 15px black;
+    box-shadow: 0 10px #00000088;
     transition: all 0.5s ease-in-out;
 }
 .linkholder:hover {
 
-    border: 5px solid white;
+    border: 5px solid white !important;
     transition: all 0.1s ease-in-out;
-    transform: scale(1.1);
+    transform: translateX(10px);
 }
 
 .linkicon {
     vertical-align: middle;
-    max-width: 75px;
-    max-height: 75px;
+    max-width: var(--link-icon-size);
+    max-height: var(--link-icon-size);
     border-radius: 100%;
     box-shadow: 0 0 10px #000000ff;
 }
@@ -88,7 +160,7 @@ body {
     vertical-align: middle;
     color: white;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 20px;
 
     margin-top: auto;
     margin-bottom: auto;
@@ -99,12 +171,19 @@ body {
 
 #linkinstagram {
     background: linear-gradient(90deg, #a600ff, #ff00bb, #ffd900);
+    border-color: #54002e;
 }
 #linkcara {
     background: linear-gradient(90deg, #1a1a1a, #2c2c2c);
+    border-color: #000000;
 }
 #linkdiscord {
     background: linear-gradient(90deg, #0069e9, #118cff);
+    border-color: #001a47;
+}
+#linkgithub {
+    background: linear-gradient(90deg, #000000, #340062);
+    border-color: #480075;
 }
 
 a {
