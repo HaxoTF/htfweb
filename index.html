@@ -2,11 +2,27 @@
 <html lang="en">
 
 <head>
-    <title>HaxoTF Links</title>
+    <title>HaxoTF // Links</title>
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="furry, furryart, art, anthro, anthropomorphic, drawing, digitalart, animals">
+
+    <script>
+        const links = [
+            "https://www.youtube.com/watch?v=3YHM768tt0c", // Quandingle dingle
+            "https://www.youtube.com/watch?v=K8X5t5TYjWY", // My table... NOOOOOOO!!!!
+            "https://www.youtube.com/watch?v=hJGtSwpOddQ", // Trolololo
+            "https://youtu.be/451XC5PigRY?si=eeeKgn-j6XFJY4-O", // I touched it. They are right behind be aren't they?
+            "https://www.youtube.com/watch?v=T6hvB9tlPak", // REAL BANGER!!!
+            "https://eforms.com/images/2018/03/Employment-Job-Application-550x712.png" // My biggest fear
+        ]
+
+        function GoRandomMeme() {
+            const randomLink = links[Math.floor(Math.random() * links.length)]
+            window.location.href = randomLink
+        }
+    </script>
 </head>
 
 <body>
@@ -39,14 +55,14 @@
                 </a>
 
                 <!-- Instagram -->
-                <a href="https://www.instagram.com/haxotf/">
+                <div onclick="GoRandomMeme()">
                 <div class="linkholder" id="linkinstagram">
                     <img class="linkicon" src="images/glypths/instagram.png" alt="Instagram logo">
                     <span class="linkname">Instagram</span>
                 </div>
 
                 <!-- Github -->
-                <a href="https://github.com/HaxoTF">
+                <a href="google.com">
                 <div class="linkholder" id="linkgithub">
                     <img class="linkicon" src="images/glypths/github.png" alt="Github logo">
                     <span class="linkname">Github</span>
