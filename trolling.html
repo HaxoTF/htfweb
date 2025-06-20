@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+        <title>Redirecting...</title>
+
+        <script>
+
+            // Link part
+            const links = [
+                "https://www.youtube.com/watch?v=3YHM768tt0c", // Quandingle dingle
+                "https://www.youtube.com/watch?v=K8X5t5TYjWY", // My table... NOOOOOOO!!!!
+                "https://www.youtube.com/watch?v=hJGtSwpOddQ", // Trolololo
+                "https://youtu.be/451XC5PigRY?si=eeeKgn-j6XFJY4-O", // I touched it. They are right behind be aren't they?
+                "https://www.youtube.com/watch?v=T6hvB9tlPak", // REAL BANGER!!!
+                "https://eforms.com/images/2018/03/Employment-Job-Application-550x712.png" // My biggest fear
+            ]
+
+            function GoRandomMeme() {
+                const randomLink = links[Math.floor(Math.random() * links.length)]
+                window.location.href = randomLink
+            }
+
+            setTimeout(GoRandomMeme, 2000)
+
+        </script>
+
+        <style>
+            body {
+                margin: 0;
+                height: 1vh;
+            }
+            #main {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0;
+                height: 100vh;
+            }
+            #quotediv {
+                font-family: 'Courier New', Courier, monospace;
+                font-weight: bold;
+                font-size: 20px;
+                text-align: center;
+            }
+        </style>
+
+    </head>
+    <body>
+        
+        <div id="main">
+            <div id="quotediv"></div>
+            <script>
+                const quotes = [
+                    "Never coming back...",
+                    "Don't touch my pizza<br>Don't touch my Jelly<br>I don't like blue cheese, cause it's really smelly",
+                    "Nope",
+                    "Heheheha",
+                    "Never gonna give you up<br>Never gonna let you down<br>Never gonna run around and desert you<br>Never gonna make you cry<br>Never gonna say goodbye<br>Never gonna tell a lie and hurt you"
+                ]
+
+                function randomQuote() {
+                    const quotediv = document.getElementById("quotediv")
+                    const quote = quotes[Math.floor(Math.random() * quotes.length)]
+                    quotediv.innerHTML = quote
+                }
+                randomQuote()
+            </script>
+        </div>
+
+    </body>
+</html>
