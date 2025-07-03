@@ -16,10 +16,8 @@
     --stripe-color-2: #001f5a22;
 }
 
-/* Base Styling */
-
 body, html {
-    font-family: "Roboto", sans-serif;
+    font-family: "Consolas";
     background: linear-gradient(#2f99ff, #56009d);
     height: 100%;
     margin: 0;
@@ -56,10 +54,7 @@ details summary{
     margin: 10px;
     margin: 0;
 }
-/* details[open] summary::before {
-    content: "❌ ";
-    text-shadow: 0 0 5px black;
-} */
+
 details[open] {
     transition: all 0.2s ease-in-out;
     background-color: var(--color-blue);
@@ -120,27 +115,33 @@ details[open] {
 .main {
     color: var(--color-blue);
     font-size: 20px;
-    max-width: 600px;
+    width: 350px;
 
     display: block;
-    width: fit-content;
-    /* background-color: var(--color-dark); */
+
     background-image: linear-gradient(var(--color-blue-darker), var(--color-dark));
-    box-shadow: 0 15px 0 var(--color-blue-darker);
-    border: 5px solid var(--color-blue);
+    
+    box-shadow: 
+        0 15px 0 var(--color-blue-darker),
+        0 0 30px black;
+
+    border: 3px solid var(--color-blue);
     padding: 20px;
     margin: auto;
-    border-radius: 50px;
 
     margin-left: 10px;
     margin-right: 10px;
     z-index: 2;
 }
 .maintop {
-    width: var(--link-width);
+    display: flex;
+    width: calc(var(--link-width + 1px));
 
     margin-left: auto;
     margin-right: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    justify-content: center;
 }
 .mainlogo {
     display: inline-block;
@@ -150,6 +151,8 @@ details[open] {
 
     border-radius: 100%;
     border: 5px solid var(--color-blue);
+
+    margin-right: 20px;
 }
 .mainsig {
     display: inline-block;
@@ -171,7 +174,6 @@ details[open] {
     width: var(--link-width);
     background-color: var(--color-dark);
     border: 5px solid white;
-    border-radius: 50px;
 
     box-shadow: 0 10px #00000088;
     transition: all 0.5s ease-in-out;
@@ -187,8 +189,6 @@ details[open] {
     vertical-align: middle;
     max-width: var(--link-icon-size);
     max-height: var(--link-icon-size);
-    border-radius: 100%;
-    box-shadow: 0 0 10px #000000ff;
 }
 .linkname {
     vertical-align: middle;
@@ -214,14 +214,18 @@ details[open] {
     border-color: #54002e;
 }
 #linkcara {
-    background: linear-gradient(90deg, #1a1a1a, #2c2c2c);
+    background: linear-gradient(90deg, #313131, #141414);
     border-color: #000000;
 }
 #linkdiscord {
-    background: linear-gradient(90deg, #0069e9, #118cff);
+    background: linear-gradient(90deg, #0020af, #6db7fc);
     border-color: #001a47;
 }
 #linkgithub {
     background: linear-gradient(90deg, #000000, #340062);
     border-color: #480075;
+}
+#linkartfight {
+    background: linear-gradient(90deg, #077591, #292929);
+    border-color: #053941;
 }
